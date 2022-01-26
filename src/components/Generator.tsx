@@ -1,25 +1,22 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import Input from "./Input";
 import { Tag } from "react-tag-input";
-
+import Table from "./Table";
+import Form from "./Form";
 function Generator() {
 	//let localUsersString = localStorage.getItem('users') || "";
 	// = JSON.parse(localUsersString)
-	let localUsers: Tag[] = [{"id": "Holmes7", "text": "Holmes7"}]
-
-	const [users, setUsers] = useState(localUsers);
-	let localRatings: Tag[] = [{"id": "1800", "text": "1800"}]
-	
+	let localRatings: Tag[] = [{"id": "2000", "text": "2000"}]
 	const [ratings, setRatings] = useState(localRatings);
 
+	const [problems, setProblems] = useState(["797E"]);
+ 
 	return (
-		<div className="columns">
-			<div className="column">
-				<Input label="Codeforces Usernames"state={users} setState={setUsers}  />	
-				</div>
-			<div className="column">
-				<Input label="Problem Ratings" state={ratings} setState={setRatings}  />
-			</div>
+		<div>
+			<Form ratings={ratings} setRatings={setRatings}/>
+			<Table ratings={ratings.map(rating => {
+					return rating.text;
+				})} problems={problems}></Table>
 		</div>
 	)
 }

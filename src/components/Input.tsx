@@ -12,15 +12,15 @@ function Input(props: InputProps) {
     setState([...state, tag]);
   };
   return (
-    <div className="mt-5 mx-2">
+    <div className="mt-5 ml-2">
       <div className='label'>
         {props.label}
       </div>
       <ReactTags 
         classNames={{
-          tag: 'tag is-primary is-medium mb-2 mr-1',
+          tag: 'tag is-warning is-medium mb-2 mr-1',
           tagInputField: 'input',
-          remove: 'delete'
+          remove: 'delete is-small'
         }}
         tags={props.state}
         handleDelete={handleDelete}
