@@ -1,4 +1,5 @@
-import mergeLists from "../helpers/mergeLists";
+import { useState } from "react";
+import { mergeLists } from "../helpers/mergeLists";
 import TableRow from "./TableRow";
 
 function Table(props: {ratings: string[], problems: string[]}) {
@@ -12,9 +13,11 @@ function Table(props: {ratings: string[], problems: string[]}) {
         </tr>
       </thead>
       <tbody>
-        {results.map(result => (
-          <TableRow rating={result.rating} problem={result.problem} key={result.problem}></TableRow>
-        ))}
+        {results.map((result, index) => {
+          return (
+            <TableRow rating={result.rating} problem={result.problem} key={index}/>
+          )
+        })}
       </tbody>
     </table>
   )
