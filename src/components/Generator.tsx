@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Tag } from "react-tag-input";
 import Table from "./Table";
 import Form from "./Form";
 import { Mashup } from "../helpers/Mashup";
@@ -11,7 +10,7 @@ function Generator() {
 	const [tagRatings, setTagRatings] = useState([{"id": "2100", "text": "2100"}]);
 
 	useEffect(() => {
-		const tagRatings = JSON.parse((localStorage.getItem('ratings') || "[]"))
+		const tagRatings = JSON.parse((localStorage.getItem('ratings') || '[{"id": "2100", "text": "2100"}]'))
 		if(tagRatings.length){
 			setTagRatings(tagRatings)
 		}
@@ -23,7 +22,7 @@ function Generator() {
   const [users, setUsers] = useState([{"id": "Holmes7", "text": "Holmes7"}]);
 
   useEffect(() => {
-		const users = JSON.parse((localStorage.getItem('users') || "[]"))
+		const users = JSON.parse((localStorage.getItem('users') || '[{"id": "Holmes7", "text": "Holmes7"}]'))
 		if(users.length){
 			setUsers(users)
 		}
