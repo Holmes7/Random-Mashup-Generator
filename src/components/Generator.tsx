@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tag } from "react-tag-input";
 import Table from "./Table";
 import Form from "./Form";
@@ -6,13 +6,28 @@ import { Mashup } from "../helpers/Mashup";
 function Generator() {
 	//let localUsersString = localStorage.getItem('users') || "";
 	// = JSON.parse(localUsersString)
-	let localRatings: Tag[] = [{"id": "2000", "text": "2000"}]
-	const [tagRatings, setTagRatings] = useState(localRatings);
+	// let localRatings: Tag[] = [{"id": "2000", "text": "2000"}];
+
+	const [tagRatings, setTagRatings] = useState([{"id": "2100", "text": "2100"}]);
+
+	useEffect(() => {
+		const tagRatings = JSON.parse((localStorage.getItem('ratings') || "[]"))
+		if(tagRatings.length){
+			setTagRatings(tagRatings)
+		}
+	}, [])
+
 	const [tableRatings, setTableRatings] = useState(["2000"])
 	const [problems, setProblems] = useState(["797E"]);
  	
- 	let localUsers: Tag[] = [{"id": "Holmes7", "text": "Holmes7"}]
-  const [users, setUsers] = useState(localUsers);
+  const [users, setUsers] = useState([{"id": "Holmes7", "text": "Holmes7"}]);
+
+  useEffect(() => {
+		const users = JSON.parse((localStorage.getItem('users') || "[]"))
+		if(users.length){
+			setUsers(users)
+		}
+	}, [])
 
   const [firstContest, setFirstContest] = useState(1);
   async function generate(){
@@ -20,6 +35,8 @@ function Generator() {
   	const mashupProblems = await mashup.create()
   	setTableRatings(tagRatings.map(rating => rating.text))
   	setProblems(mashupProblems)
+  	localStorage.setItem('ratings', JSON.stringify(tagRatings));
+  	localStorage.setItem('users', JSON.stringify(users));
   }
 	return (
 		<div>
