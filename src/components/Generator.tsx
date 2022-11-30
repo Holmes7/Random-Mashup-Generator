@@ -8,25 +8,16 @@ function Generator() {
 	// let localRatings: Tag[] = [{"id": "2000", "text": "2000"}];
 
 	const [tagRatings, setTagRatings] = useState([{"id": "2100", "text": "2100"}]);
-
-	useEffect(() => {
-		const tagRatings = JSON.parse((localStorage.getItem('ratings') || '[{"id": "2100", "text": "2100"}]'))
-		if(tagRatings.length){
-			setTagRatings(tagRatings)
-		}
-	}, [])
-
 	const [tableRatings, setTableRatings] = useState(["2000"])
 	const [problems, setProblems] = useState(["797E"]);
- 	
   const [users, setUsers] = useState([{"id": "Holmes7", "text": "Holmes7"}]);
 
-  useEffect(() => {
-		const users = JSON.parse((localStorage.getItem('users') || '[{"id": "Holmes7", "text": "Holmes7"}]'))
-		if(users.length){
-			setUsers(users)
-		}
-	}, [])
+	useEffect(() => {
+		const tagRating = JSON.parse((localStorage.getItem('ratings') || '[{"id": "2100", "text": "2100"}]'))
+		setTagRatings(tagRating)
+		const user = JSON.parse((localStorage.getItem('users') || '[{"id": "Holmes7", "text": "Holmes7"}]'))
+		setUsers(user)
+	},[])
 
   const [firstContest, setFirstContest] = useState(1);
   async function generate(){
