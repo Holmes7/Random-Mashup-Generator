@@ -2,6 +2,8 @@
 
 This tool helps you find a set of random problems of codeforces of desired difficulty level where the problems aren't solved by any of the members in your group.
 
+[Codeforces Blog](https://codeforces.com/blog/entry/92696)
+
 ## Technologies
 
 * TypeScript
