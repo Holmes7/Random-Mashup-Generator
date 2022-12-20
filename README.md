@@ -2,6 +2,8 @@
 
 This tool helps you find a set of random problems of codeforces of desired difficulty level where the problems aren't solved by any of the members in your group.
 
+Check it out [here](https://randommashupgenerator.netlify.app/)
+ 
 [Codeforces Blog](https://codeforces.com/blog/entry/92696)
 
 ## Technologies
