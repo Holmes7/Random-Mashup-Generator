@@ -1,6 +1,6 @@
 # Random Mashup Generator
 
-This tool helps you find a set of random problems of codeforces of desired difficulty level where the problems aren't solved by any of the members in your group.
+This app helps you find a set of random problems of codeforces of desired difficulty level where the problems aren't solved by any of the members in your group.
 
 Check it out [here](https://randommashupgenerator.netlify.app/)
  
@@ -13,9 +13,9 @@ Check it out [here](https://randommashupgenerator.netlify.app/)
 * Bulma CSS
 * Vite, as an alternative to Create React App
 
-## Where can I use this tool
+## Where can I use this app
 
-* If you want to host a coding contest in your university etc. you can use this tool to get a set of random problems with the difficulty of your choice which no user has solved. You just need the codeforces usernames of all the participants.
+* If you want to host a coding contest in your university etc. you can use this app to get a set of random problems with the difficulty of your choice which no user has solved. You just need the codeforces usernames of all the participants.
 
 * If you and your friends who want to practice by giving contests together. (This was my motivation to create the app)
 
