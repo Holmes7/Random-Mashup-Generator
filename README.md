@@ -2,6 +2,8 @@
 
 This app automates the mundane task of finding random set of problems with desired difficulty level which aren't yet solved by a particular group of users.
 
+![Image](/images/generator.png)
+
 Check it out [here](https://randommashupgenerator.netlify.app/)
  
 [Codeforces Blog](https://codeforces.com/blog/entry/92696)
@@ -29,11 +31,8 @@ Other than the main problem that it solves, I have also implemented some side fe
 
 * The generated problem code is a clickable button which will copy the problem code to your clipboard.
 
-![Problem Code](/images/problem_code.png)
-
 * Some of the older problems of codeforces aren't that nice. Many don't even have an editorial. So I have also implemented an option to only find problems created after a certain time.
 
-![Time](/images/time.png)
 
 ## Bug / Feature Request
 If you find a bug or have a feature request kindly open an issue [here](https://github.com/Holmes7/Random-Mashup-Generator/issues/new). Please be as elaborate as possible as that will help me a lot in finding the solution.
