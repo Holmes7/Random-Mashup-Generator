@@ -1,6 +1,6 @@
 # Random Mashup Generator
 
-This app helps you find a set of random problems of codeforces of desired difficulty level where the problems aren't solved by any of the members in your group.
+This app solves the mundane task of finding random set of problems with desired difficulty level which aren't yet solved by a particular group of users.
 
 Check it out [here](https://randommashupgenerator.netlify.app/)
  
