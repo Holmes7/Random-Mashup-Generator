@@ -1,6 +1,6 @@
 # Random Mashup Generator
 
-This app solves the mundane task of finding random set of problems with desired difficulty level which aren't yet solved by a particular group of users.
+This app automates the mundane task of finding random set of problems with desired difficulty level which aren't yet solved by a particular group of users.
 
 Check it out [here](https://randommashupgenerator.netlify.app/)
  
