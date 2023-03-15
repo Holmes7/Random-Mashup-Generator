@@ -25,15 +25,15 @@ export class Mashup {
     let mashup = this.ratings.map(rating => {
       return this.getFirstUnsolvedProblem(rating, problemsAfterFirstContest, solved)
     })
-    return mashup
+    return mashup;
   }
-  getFirstUnsolvedProblem(rating: number, problemsAfterFirstContest: Problem[], solved: Set<string>): string {
+  getFirstUnsolvedProblem(rating: number, problemsAfterFirstContest: Problem[], solved: Set<string>): Problem {
     for (let problem of problemsAfterFirstContest) {
       if(problem.rating == rating && !solved.has(problem.name)){
         solved.add(problem.name)
-        return `${problem.contestId}${problem.index}`
+        return problem;
       }
     }
-    return "No problem found"
+    throw("No problem found");
   }
 }
