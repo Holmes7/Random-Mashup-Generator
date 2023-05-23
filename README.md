@@ -33,6 +33,9 @@ Other than the main problem that it solves, I have also implemented some side fe
 
 * Some of the older problems of codeforces aren't that nice. Many don't even have an editorial. So I have also implemented an option to only find problems created after a certain time.
 
+## Story
+
+In my third year I joined a group to practice competitive programming. There, we used to compete in virtual contests. Before the contest, the admin manually searched for problems from Codeforces. This task took a lot of time, as he had to be sure that none of us had previously solved them. This process offended me and successively inspired me to solve this problem. I created a web app using React and TypeScript to automate the task.
 
 ## Bug / Feature Request
 If you find a bug or have a feature request kindly open an issue [here](https://github.com/Holmes7/Random-Mashup-Generator/issues/new). Please be as elaborate as possible as that will help me a lot in finding the solution.
